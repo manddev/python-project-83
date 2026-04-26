@@ -11,3 +11,6 @@ make install
 ```bash
 make dev
 ```
+
+### To see result:
+https://python-project-83-wuz7.onrender.com/
