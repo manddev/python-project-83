@@ -1,8 +1,5 @@
 PORT ?= 8000
 
-render-start:
-    gunicorn -w 5 -b 0.0.0.0:$(PORT) page_analyzer:app
-
 install:
 	uv sync
 
@@ -25,4 +22,7 @@ pre-commit: lint-fix format
 
 start:
 	uv run gunicorn -w 5 -b 0.0.0.0:$(PORT) page_analyzer:app
+
+render-start:
+	gunicorn -w 5 -b 0.0.0.0:$(PORT) page_analyzer:app
 
