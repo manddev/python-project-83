@@ -1,7 +1,7 @@
 import os
 
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, render_template
 
 load_dotenv()
 app = Flask(__name__)
@@ -12,4 +12,4 @@ app.config['DEBUG'] = os.getenv('DEBUG') == 'True'
 
 @app.route("/")
 def index():
-    return "Hello, Page Analyzer!"
+    return render_template("index.html")
